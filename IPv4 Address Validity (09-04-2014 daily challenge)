@@ -1,0 +1,76 @@
+IPv4 Address Validity
+
+Given an IPv4 address as a string, check if the address is valid. Print Valid if the address is valid else print Invalid. IPv4 address has 4 blocks of 8 bit (unsigned) numbers ranging from 0 to 255 separated by a . (dot).
+
+Boundary Condition(s):
+1 <= Length of address <= 50
+
+Input Format:
+The first line contains the IP address.
+
+Output Format:
+The first line contains Valid or Invalid.
+
+Example Input/Output 1:
+Input:
+127.0.0.1
+
+Output:
+Valid
+
+Example Input/Output 2:
+Input:
+266.2.9.34.12
+
+Output:
+Invalid
+
+Explanation:
+As 266 is present in the IP address
+
+solution:
+
+#include <iostream>
+ 
+using namespace std;
+
+int main(int argc, char** argv)
+{
+string s;
+int n,i,j,k,m=0,f=0;
+cin>>s;
+k=s.length();
+int a[k]={0};
+for(i=0;i<s.length();i++)
+{
+    if(s[0]=='.'||s[i]=='.'&&s[i+1]=='.')
+    {
+        f=1;
+        break;
+    }
+    if(s[i]=='.')
+    m++;
+    else
+    {
+        a[m]=(a[m]*10)+(s[i]-48);
+    }
+}
+if(m==3)
+{
+    for(i=0;i<=m;i++)
+    {
+        if(a[i]>255)
+        {
+            f=1;break;
+        }
+    }
+    
+}
+else
+f=1;
+if(f==0)
+cout<<"Valid";
+else
+cout<<"Invalid";
+
+}
