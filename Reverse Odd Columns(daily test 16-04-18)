@@ -1,0 +1,96 @@
+Reverse Odd Columns
+
+
+
+
+Given a matrix of size NxN, the program must reverse the columns present in odd positions of the matrix and print the matrix.
+
+Boundary Condition(s):
+1 <= N <= 100
+
+Input Format:
+The first line contains N.
+The next N lines contain the matrix.
+
+Output Format:
+The first N line contains the specified output.
+
+Example Input/Output 1:
+Input:
+3
+1 2 3
+4 5 6
+7 8 9
+
+Output:
+7 2 9
+4 5 6
+1 8 3
+
+Example Input/Output 2:
+Input:
+4
+12 56 89 555
+76 332 22 17
+77 33 77 99
+56 56 29 48
+
+Output:
+56 56 29 555
+77 332 77 17
+76 33 22 99
+12 56 89 4
+
+
+
+
+
+#include<stdio.h>
+
+#include <stdlib.h>
+
+
+
+int main()
+
+{
+
+int i,j,k=0,n,a[100][100];
+
+scanf("%d",&n);
+
+for(i=0;i<n;i++)
+
+for(j=0;j<n;j++)
+
+scanf("%d",&a[i][j]);
+
+
+
+for(i=n-1;i>=0;i--)
+
+{
+
+    for(j=0;j<n;j++)
+
+    {
+
+        
+
+        if(j%2==0)
+
+      printf("%d ",a[i][j]);
+
+      else
+
+         printf("%d ",a[k][j]);
+
+    }
+
+    k++;
+
+    printf("\n");
+
+}
+
+}
