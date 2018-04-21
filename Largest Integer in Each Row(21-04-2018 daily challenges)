@@ -1,0 +1,60 @@
+Largest Integer in Each Row
+Given a matrix M of size R*C, the program must print the largest integer in each row.
+Boundary Condition(s):
+2 < R, C < 50
+Input Format:
+The first line contains R and C separated by space.
+The next R lines contain C values each separated by a space.
+Output Format:
+The first R lines contain the largest integer in each row.
+Example Input/Output 1:
+Input:
+3 3
+1 2 3
+4 6 5
+7 8 9
+Output:
+3
+6
+9
+Example Input/Output 2:
+Input:
+3 4
+12 23 34 45
+21 3 55 67
+2 45 56 12
+Output:
+45
+67
+56
+
+program
+#include<stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+int i,j,k,n,r,c,a[100][100],max;
+scanf("%d%d",&r,&c);
+for(i=0;i<r;i++)
+for(j=0;j<c;j++)
+scanf("%d",&a[i][j]);
+for(i=0;i<r;i++)
+{
+    max=0;
+    for(j=0;j<c;j++)
+    {
+        
+        if(max<a[i][j])
+        {
+            max=a[i][j];
+        }
+    
+}
+printf("%d",max);
+printf("\n");
+
+
+}
+
+}
