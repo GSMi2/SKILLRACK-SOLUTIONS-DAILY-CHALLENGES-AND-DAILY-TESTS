@@ -1,0 +1,20 @@
+
+C++ - Class Method Definition Calculator add
+
+Fill in the missing lines of code to define the class Calculator along with the method add so that the program accepts two integers as input and prints their sum as the output.
+
+
+
+class  Calculator 
+{
+    public:
+    int c,d;
+    int   x=c,y=d,sum=0;
+    int add()
+    {
+        sum=x+y;
+        return sum;
+    }
+};
+
+
