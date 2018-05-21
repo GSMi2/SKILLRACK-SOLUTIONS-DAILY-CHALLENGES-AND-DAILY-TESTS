@@ -1,0 +1,57 @@
+
+Toggle Consonants Adjacent to Vowels
+
+The program must accept a string S containing only alphabets both in lower and upper case. The program must toggle the case of the consonants (non-vowels) adjacent to the vowels.
+
+Boundary Condition(s):
+2 <= Length of the string S <= 100
+
+Input Format:
+The first line contains the string value S.
+
+Output Format:
+The first line contains the toggle consonants between vowels. 
+
+Example Input/Output 1:
+Input:
+adJaeCent
+
+Output:
+aDjaeceNt
+
+
+Example Input/Output 2:
+Input:
+mAtRIMonY
+
+Output:
+MATrImoNY
+ 
+ 
+#include<stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+int i,j,k,n;
+char s[100];
+scanf("%s",s);
+char x,l,m;
+n=strlen(s);
+for(i=0;i<n;i++)
+{
+    x=tolower(s[i]);
+    l=tolower(s[i-1]);
+    m=tolower(s[i+1]);
+    if(x=='a'||x=='e'||x=='i'||x=='o'||x=='u')
+    printf("%c",s[i]);
+else if((x!='a'&&x!='e'&&x!='i'&&x!='o'&&x!='u')&&(l=='a'||l=='e'||l=='i'||l=='o'||l=='u')||(m=='a'||m=='e'||m=='i'||m=='o'||m=='u'))
+       if(isupper(s[i]))
+       printf("%c",tolower(s[i]));
+       else
+       printf("%c",toupper(s[i]));
+    else
+    printf("%c",s[i]);
+}
+
+}
