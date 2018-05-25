@@ -16,5 +16,14 @@ class  Calculator
         return sum;
     }
 };
+int main()
+{
+int a,b;
+cin>>a;
+cin>>b;
+ Calculator calc{a,b};
+ cout<<calc.add();
+return 0;
+}
 
 
