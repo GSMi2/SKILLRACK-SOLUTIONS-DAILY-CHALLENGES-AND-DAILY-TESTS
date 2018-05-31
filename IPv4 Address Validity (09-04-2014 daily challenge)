@@ -52,7 +52,7 @@ for(i=0;i<s.length();i++)
     m++;
     else
     {
-        a[m]=(a[m]*10)+(s[i]-48);
+        a[m]=(a[m]*10)+(s[i]-48);    //example-->(226)---> a[m]=(a[m]*10)+(s[i]-48)----->(a[m]=(a[m]*10=0(because of a[k]={0})then it will add first element by doing +(s[i]-48) then a[m]=2 then 2=(2*10)+(s[i]-48)---->it will become 26 then so on till 266.
     }
 }
 if(m==3)
