@@ -1,0 +1,49 @@
+
+Numbers from X to Y and Y to Z
+
+Given three numbers X, Y and Z print the numbers from X to Y and Y to Z.
+
+Boundary Condition(s):
+1 <= X, Y, Z <= 1000
+
+Input Format:
+The first line contains the value of X.
+The second line contains the value of Y.
+The third line contains the value of Z.
+
+Output Format:
+The first line contains the values from X to Y seperated by space.
+The second line contains the values from Y to Z seperated by space.
+
+Example Input/Output 1:
+Input:
+3
+8
+15
+
+Output:
+3 4 5 6 7 8
+8 9 10 11 12 13 14 15
+
+Example Input/Output 2:
+Input:
+2 5 9
+
+Output:
+2 3 4 5
+5 6 7 8 9
+
+#include<stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+int i,j,k,n,p,l,z;
+scanf("%d%d%d",&p,&l,&z);
+for(i=p;i<=l;i++)
+printf("%d ",i);
+printf("\n");
+for(j=l;j<=z;j++)
+printf("%d ",j);
+
+}
