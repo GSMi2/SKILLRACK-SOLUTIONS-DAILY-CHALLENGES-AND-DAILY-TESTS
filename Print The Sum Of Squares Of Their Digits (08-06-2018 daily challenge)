@@ -1,0 +1,46 @@
+
+Print The Sum Of Squares Of Their Digits
+
+Accept a number N as input and print the sum of the squares of their digits.
+
+Boundary Condition(s):
+1 <= N <=99999999
+
+Input Fomat:
+The first line contains the number.
+
+Output Format:
+The first line conntains the sum of the squares of their digits.
+
+Example Input/Output 1:
+Input:
+123
+
+Output:
+14
+
+Example Input/Output 2:
+Input:
+34567
+
+Output:
+135
+
+
+IN C:
+
+#include<stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+int i,z,j,k,n,w,p,a,s=0;
+scanf("%d",&n);
+while(n>0)
+{
+a=n%10;
+s=s+(a*a);
+n=n/10;
+}
+printf("%d",s);
+}
