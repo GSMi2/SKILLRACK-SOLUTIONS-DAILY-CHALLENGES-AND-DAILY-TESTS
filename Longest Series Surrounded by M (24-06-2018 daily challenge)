@@ -1,0 +1,80 @@
+
+Longest Series Surrounded by M
+
+An array of N integers and an integer M are passed as input. The program must print the longest series of integers surrounded by M on its both ends. The series must not contain the integer M. If more than one longest such series are found print the last occurring series.
+
+Boundary Condition(s):
+3 <= N <= 1000
+1 <= M <= 999999999
+
+Input Format:
+The first line contains N and M separated by space(s).
+The second line contains N integers separated by space(s).
+
+Output Format:
+The first line contains the longest series of integers separated by a space.
+
+Example Input/Output 1:
+Input:
+7 2
+45 2 21 534 2 45 2
+
+Output:
+21 534
+
+Example Input/Output 2:
+Input:
+10 23
+23 76 23 129 34 12 23 45 67 23
+
+Output:
+129 34 12
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include <iostream>
+ 
+using namespace std;
+
+int main(int argc, char** argv)
+{
+int i,j,k,c=0,n,x,m,l;
+cin>>n>>x;
+int a[n];
+for(i=0;i<n;i++)
+cin>>a[i];
+for(i=0;i<n;i++)
+{
+    if(a[i]==x)
+    {
+        k=0;
+        for(j=i+1;j<n;j++)
+        {
+            k++;
+            if(a[j]==x)
+            break;
+        }
+        if(k>c&&j!=n)
+        {
+            m=i+1;
+            l=j;
+            c=k;
+        }
+    }
+}
+for(i=m;i<l;i++)
+cout<<a[i]<<" ";
+}
