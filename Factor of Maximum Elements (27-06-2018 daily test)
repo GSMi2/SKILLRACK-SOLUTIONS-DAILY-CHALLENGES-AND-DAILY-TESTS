@@ -1,0 +1,69 @@
+Factor of Maximum Elements
+
+Given an integer array of size N as input, the program must print the array element which is the factor of the maximum number of other elements in the array. If more than one such elements are present, then print the smallest element as the output. If every element of the array is co-prime to other elements, then print ‘-1’ as output.
+
+Boundary Condition(s):
+1 <= N <= 50
+
+Input Format:
+The first line contains the value of N.
+The second line contains the N values separated by space(s).
+
+Output Format:
+The first line contains the array element which is the factor of the maximum number of elements in the array.
+
+Example Input/Output 1:
+Input:
+4
+32 3 16 8
+
+Output:
+8
+
+Explanation:
+8 is a factor of 16 and 32.
+16 is a factor of 32.
+3 and 32 are not factors of any elements of the array.
+Hence the output is 8.
+
+Example Input/Output 2:
+Input:
+10
+11 2 17 3 5 13 7 19 23 29
+
+Output:
+-1
+
+Explanation:
+Since every element of the array is co-prime to other elements, the output is -1.
+
+
+
+IN C:
+
+#include<stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+int i,j,k,n,a[100],max=0,l=0;
+scanf("%d",&n);
+for(i=0;i<n;i++)
+scanf("%d",&a[i]);
+for(i=0;i<n;i++)
+{
+    if(a[i]%2!=0&&a[i]%3!=0)
+    {
+        printf("-1");
+        return 0;
+    }
+    else if(a[i]>max)
+    {
+        max=a[i];
+        l=max/n;
+    }
+}
+printf("%d",l);
+}
+
+
